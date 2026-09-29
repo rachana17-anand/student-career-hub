@@ -4,667 +4,395 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Student Career Hub</title>
+    <title>Engineer Career Hub</title>
 
+    <!-- Connect CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
 
-    <div class="logo">🎓 CareerHub</div>
+            <div class="logo">
+                Engineer<span>CareerHub</span>
+            </div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#opportunities">Opportunities</a>
-        <a href="#roadmaps">Roadmaps</a>
-        <a href="#profile">Profile</a>
-    </nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#opportunities">Opportunities</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
 
-    <button class="login-btn" onclick="showLogin()">
-        Login
-    </button>
-
-</header>
-
-
-<!-- HERO -->
-<section id="home" class="hero">
-
-    <div class="hero-text">
-
-        <p class="tag">YOUR CAREER STARTS HERE 🚀</p>
-
-        <h1>
-            Build Your Skills.<br>
-            Find Your <span>Opportunity.</span>
-        </h1>
-
-        <p class="description">
-            A single platform for students to discover internships,
-            hackathons, certifications and career opportunities.
-        </p>
-
-        <div class="hero-buttons">
-
-            <button onclick="scrollToOpportunities()">
-                Explore Opportunities
+            <button class="login-btn" onclick="openLogin()">
+                Login
             </button>
 
-            <button class="outline-btn" onclick="scrollToRoadmaps()">
-                Explore Roadmaps
-            </button>
-
-        </div>
-
-    </div>
+        </nav>
+    </header>
 
 
-    <!-- DASHBOARD CARD -->
-    <div class="hero-card">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
 
-        <div class="card-icon">🎯</div>
+        <div class="hero-content">
 
-        <h2>Your Career Dashboard</h2>
+            <p class="welcome">WELCOME TO ENGINEER CAREER HUB</p>
 
-        <div class="progress">
-
-            <div class="progress-info">
-                <span>Career Progress</span>
-                <span>68%</span>
-            </div>
-
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-
-        </div>
-
-
-        <div class="stats">
-
-            <div>
-                <strong>8</strong>
-                <small>Applications</small>
-            </div>
-
-            <div>
-                <strong>5</strong>
-                <small>Certificates</small>
-            </div>
-
-            <div>
-                <strong>2</strong>
-                <small>Projects</small>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- OPPORTUNITIES -->
-<section id="opportunities" class="section">
-
-    <div class="section-heading">
-
-        <p class="tag">DISCOVER</p>
-
-        <h2>Career Opportunities</h2>
-
-        <p>
-            Explore opportunities that can help you grow your career.
-        </p>
-
-    </div>
-
-
-    <div class="opportunity-grid">
-
-
-        <!-- INTERNSHIPS -->
-        <div class="opportunity-card">
-
-            <div class="icon">💼</div>
-
-            <h3>Internships</h3>
+            <h1>
+                Build Your
+                <span>Engineering Career</span>
+                With Confidence
+            </h1>
 
             <p>
-                Find internships and gain real-world experience.
+                Discover career paths, internships, skills,
+                projects and opportunities designed for
+                engineering students.
             </p>
 
-            <button onclick="showSection('internships')">
-                Explore →
-            </button>
+            <div class="hero-buttons">
 
-        </div>
+                <!-- THIS BUTTON NOW WORKS -->
+                <button
+                    class="primary-btn"
+                    onclick="exploreOpportunities()">
+                    Explore Opportunities
+                </button>
 
+                <a href="#careers" class="secondary-btn">
+                    Explore Careers
+                </a>
 
-        <!-- HACKATHONS -->
-        <div class="opportunity-card">
-
-            <div class="icon">🏆</div>
-
-            <h3>Hackathons</h3>
-
-            <p>
-                Participate in hackathons and build amazing projects.
-            </p>
-
-            <button onclick="showSection('hackathons')">
-                Explore →
-            </button>
-
-        </div>
-
-
-        <!-- CERTIFICATIONS -->
-        <div class="opportunity-card">
-
-            <div class="icon">📜</div>
-
-            <h3>Certifications</h3>
-
-            <p>
-                Discover certifications to strengthen your profile.
-            </p>
-
-            <button onclick="showSection('certifications')">
-                Explore →
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- INTERNSHIPS SECTION -->
-
-<section id="internships" class="opportunity-section">
-
-    <div class="section-heading">
-
-        <p class="tag">INTERNSHIPS</p>
-
-         <h2>Find Your Next Internship 💼</h2>
-
-        <p>
-            Explore internship opportunities and start building experience.
-        </p>
-
-    </div>
-
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="internshipSearch"
-            placeholder="Search internships..."
-            onkeyup="searchCards('internshipSearch', 'internship-card')"
-        >
-
-    </div>
-
-
-    <div class="listing-grid">
-
-
-        <div class="listing-card internship-card">
-
-            <span class="badge">AI / ML</span>
-
-            <h3>AI / ML Internship</h3>
-
-            <p>Learn machine learning and work on practical projects.</p>
-
-            <div class="details">
-                📍 Remote
-                <br>
-                ⏳ 2 - 3 Months
             </div>
 
-            <button onclick="viewOpportunity('AI / ML Internship')">
-                View Opportunity →
-            </button>
+        </div>
+
+    </section>
+
+
+    <!-- Career Paths -->
+    <section id="careers" class="section">
+
+        <div class="section-heading">
+
+            <p>CAREER PATHS</p>
+
+            <h2>
+                Find Your Engineering Career
+            </h2>
+
+            <span>
+                Explore popular career paths and discover
+                the skills you need.
+            </span>
 
         </div>
 
 
-        <div class="listing-card internship-card">
+        <div class="cards">
 
-            <span class="badge">Web Development</span>
+            <div class="card">
 
-            <h3>Web Development Internship</h3>
+                <div class="card-icon">💻</div>
 
-            <p>Build responsive websites and learn modern web development.</p>
+                <h3>Software Engineering</h3>
 
-            <div class="details">
-                📍 Remote
-                <br>
-                ⏳ 3 Months
+                <p>
+                    Build applications, websites and software
+                    using modern technologies.
+                </p>
+
+                <button onclick="showCareer('Software Engineering')">
+                    Explore Path →
+                </button>
+
             </div>
 
-            <button onclick="viewOpportunity('Web Development Internship')">
-                View Opportunity →
-            </button>
 
-        </div>
+            <div class="card">
 
+                <div class="card-icon">🤖</div>
 
-        <div class="listing-card internship-card">
+                <h3>Artificial Intelligence</h3>
 
-            <span class="badge">Python</span>
+                <p>
+                    Learn machine learning, deep learning
+                    and artificial intelligence.
+                </p>
 
-            <h3>Python Developer Internship</h3>
+                <button onclick="showCareer('Artificial Intelligence')">
+                    Explore Path →
+                </button>
 
-            <p>Work with Python and develop useful applications.</p>
-
-            <div class="details">
-                📍 Remote
-                <br>
-                ⏳ 2 Months
             </div>
 
-            <button onclick="viewOpportunity('Python Developer Internship')">
-                View Opportunity →
-            </button>
 
-        </div>
+            <div class="card">
 
-    </div>
+                <div class="card-icon">☁️</div>
 
-</section>
+                <h3>Cloud Computing</h3>
 
+                <p>
+                    Learn cloud platforms, DevOps and
+                    distributed systems.
+                </p>
 
+                <button onclick="showCareer('Cloud Computing')">
+                    Explore Path →
+                </button>
 
-<!-- HACKATHONS SECTION -->
-
-<section id="hackathons" class="opportunity-section alternate">
-
-    <div class="section-heading">
-
-        <p class="tag">HACKATHONS</p>
-
-        <h2>Build. Compete. Create. 🏆</h2>
-
-        <p>
-            Find hackathons where you can turn your ideas into projects.
-        </p>
-
-    </div>
-
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="hackathonSearch"
-            placeholder="Search hackathons..."
-            onkeyup="searchCards('hackathonSearch', 'hackathon-card')"
-        >
-
-    </div>
-
-
-    <div class="listing-grid">
-
-
-        <div class="listing-card hackathon-card">
-
-            <span class="badge">AI / ML</span>
-
-            <h3>AI Innovation Hackathon</h3>
-
-            <p>
-                Create innovative solutions using artificial intelligence.
-            </p>
-
-            <div class="details">
-                💻 Online
-                <br>
-                🎯 Beginner Friendly
             </div>
 
-            <button onclick="viewOpportunity('AI Innovation Hackathon')">
-                View Details →
-            </button>
 
-        </div>
-        <div class="listing-card hackathon-card">
+            <div class="card">
 
-            <span class="badge">Technology</span>
+                <div class="card-icon">🔐</div>
 
-            <h3>Student Tech Hackathon</h3>
+                <h3>Cyber Security</h3>
 
-            <p>
-                Work with a team and build a technology-based solution.
-            </p>
+                <p>
+                    Learn network security, ethical hacking
+                    and security operations.
+                </p>
 
-            <div class="details">
-                💻 Online
-                <br>
-                👥 Team Event
+                <button onclick="showCareer('Cyber Security')">
+                    Explore Path →
+                </button>
+
             </div>
 
-            <button onclick="viewOpportunity('Student Tech Hackathon')">
-                View Details →
-            </button>
+        </div>
+
+    </section>
+
+
+    <!-- Opportunities -->
+    <section id="opportunities" class="section opportunities">
+
+        <div class="section-heading">
+
+            <p>OPPORTUNITIES</p>
+
+            <h2>
+                Start Your Career Journey
+            </h2>
+
+            <span>
+                Find internships, jobs and learning
+                opportunities.
+            </span>
 
         </div>
 
 
-        <div class="listing-card hackathon-card">
+        <div class="cards">
 
-            <span class="badge">Web Development</span>
+            <div class="card opportunity-card">
 
-            <h3>Web3 & Web Development Hackathon</h3>
+                <div class="card-icon">🎓</div>
 
-            <p>
-                Build creative web applications and showcase your skills.
-            </p>
+                <h3>Internships</h3>
 
-            <div class="details">
-                💻 Online
-                <br>
-                🛠️ Development
+                <p>
+                    Gain practical experience by finding
+                    internships related to your engineering field.
+                </p>
+
+                <button onclick="openOpportunities('internships')">
+                    Find Internships →
+                </button>
+
             </div>
 
-            <button onclick="viewOpportunity('Web Development Hackathon')">
-                View Details →
-            </button>
 
-        </div>
+            <div class="card opportunity-card">
 
-    </div>
+                <div class="card-icon">💼</div>
 
-</section>
+                <h3>Jobs</h3>
 
+                <p>
+                    Discover entry-level engineering jobs
+                    and graduate opportunities.
+                </p>
 
+                <button onclick="openOpportunities('jobs')">
+                    Find Jobs →
+                </button>
 
-<!-- CERTIFICATIONS SECTION -->
-
-<section id="certifications" class="opportunity-section">
-
-    <div class="section-heading">
-
-        <p class="tag">CERTIFICATIONS</p>
-
-        <h2>Upgrade Your Skills 📜</h2>
-
-        <p>
-            Learn new skills and strengthen your student profile.
-        </p>
-
-    </div>
-
-
-    <div class="listing-grid">
-
-
-        <div class="listing-card">
-
-            <span class="badge">Python</span>
-
-            <h3>Python Programming</h3>
-
-            <p>
-                Build a strong foundation in Python programming.
-            </p>
-
-            <div class="details">
-                🎓 Beginner
-                <br>
-                💻 Online
             </div>
 
-            <button onclick="viewOpportunity('Python Certification')">
-                Explore →
-            </button>
 
-        </div>
+            <div class="card opportunity-card">
 
+                <div class="card-icon">📚</div>
 
-        <div class="listing-card">
+                <h3>Learning</h3>
 
-            <span class="badge">AI / ML</span>
+                <p>
+                    Improve your technical skills with
+                    courses and learning resources.
+                </p>
 
-            <h3>Machine Learning Fundamentals</h3>
+                <button onclick="openOpportunities('learning')">
+                    Start Learning →
+                </button>
 
-            <p>
-                Learn the fundamentals of machine learning.
-            </p>
-
-            <div class="details">
-                🎓 Beginner
-                <br>
-                🤖 AI / ML
             </div>
 
-            <button onclick="viewOpportunity('Machine Learning Certification')">
-                Explore →
-            </button>
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+
+        <div class="section-heading">
+
+            <p>SKILLS</p>
+
+            <h2>
+                Skills You Should Build
+            </h2>
 
         </div>
 
 
-        <div class="listing-card">
+        <div class="skills-grid">
 
-            <span class="badge">Web</span>
-
-            <h3>Web Development</h3>
-
-            <p>
-                Learn HTML, CSS and JavaScript for modern websites.
-            </p>
-
-            <div class="details">
-                🎓 Beginner
-                <br>
-                🌐 Web Development
-            </div>
-
-            <button onclick="viewOpportunity('Web Development Certification')">
-                Explore →
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ROADMAPS -->
-
-<section id="roadmaps" class="section roadmap-section">
-
-    <div class="section-heading">
-
-        <p class="tag">LEARN</p>
-
-        <h2>Career Roadmaps</h2>
-
-        <p>
-            Follow a structured path and build your skills.
-        </p>
-
-    </div>
-
-
-    <div class="roadmap-grid">
-
-
-        <div class="roadmap-card">
-
-            <h3>🤖 AI / ML</h3>
-
-            <div class="roadmap-step">Python</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">NumPy & Pandas</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">Machine Learning</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">Deep Learning</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">Projects</div>
-
-        </div>
-
-
-        <div class="roadmap-card">
-
-            <h3>🌐 Web Development</h3>
-
-            <div class="roadmap-step">HTML & CSS</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">JavaScript</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">React</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">Backend</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">Full Stack Projects</div>
-
-        </div>
-
-
-        <div class="roadmap-card">
-
-            <h3>💻 Software Development</h3>
-
-            <div class="roadmap-step">C++ / Java</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">DSA</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">SQL</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">Development</div>
-
-            <div class="arrow">↓</div>
-
-            <div class="roadmap-step">Placements</div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- PROFILE -->
-
-<section id="profile" class="section profile-section">
-
-    <div class="section-heading">
-
-        <p class="tag">YOUR PROFILE</p>
-
-        <h2>Student Profile</h2>
-
-    </div>
-
-
-    <div class="profile-card">
-
-        <div class="profile-avatar">
-            👩🏻‍💻
-        </div>
-
-
-        <div class="profile-info">
-
-            <h2>Student Name</h2>
-
-            <p>
-                B.E. Artificial Intelligence & Machine Learning
-            </p>
-
-
-            <div class="skills">
-
+            <div class="skill">
                 <span>Python</span>
-                <span>C++</span>
-                <span>DSA</span>
-                <span>HTML</span>
-                <span>CSS</span>
+                <div class="progress">
+                    <div style="width: 80%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>Java</span>
+                <div class="progress">
+                    <div style="width: 65%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>Web Development</span>
+                <div class="progress">
+                    <div style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>Data Structures</span>
+                <div class="progress">
+                    <div style="width: 55%"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Resources -->
+    <section id="resources" class="section">
+
+        <div class="section-heading">
+
+            <p>RESOURCES</p>
+
+            <h2>
+                Career Preparation
+            </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">📄</div>
+
+                <h3>Resume Builder</h3>
+
+                <p>
+                    Create a professional resume for
+                    internships and jobs.
+                </p>
+
+                <button onclick="showResource('Resume Builder')">
+                    Open →
+                </button>
 
             </div>
 
 
-            <div class="profile-links">
+            <div class="card">
 
-                <button onclick="openLink('https://github.com/')">
-                    GitHub
+                <div class="card-icon">🎤</div>
+
+                <h3>Interview Preparation</h3>
+
+                <p>
+                    Practice technical and HR interview
+                    questions.
+                </p>
+
+                <button onclick="showResource('Interview Preparation')">
+                    Practice →
                 </button>
 
-                <button onclick="openLink('https://linkedin.com/')">
-                    LinkedIn
-                </button>
+            </div>
 
-                <button onclick="showResumeMessage()">
-                    Resume
+
+            <div class="card">
+
+                <div class="card-icon">🚀</div>
+
+                <h3>Project Ideas</h3>
+
+                <p>
+                    Find engineering project ideas to
+                    strengthen your portfolio.
+                </p>
+
+                <button onclick="showResource('Project Ideas')">
+                    Explore →
                 </button>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- Footer -->
+    <footer>
 
-<!-- FOOTER -->
+        <h2>EngineerCareerHub</h2>
 
-<footer>
+        <p>
+            Helping engineering students build
+            successful careers.
+        </p>
 
-    <h2>🎓 CareerHub</h2>
+        <p class="copyright">
+            © 2026 EngineerCareerHub
+        </p>
 
-    <p>
-        Learn • Build • Connect • Grow
-    </p>
-
-    <p class="copyright">
-        © 2026 Student Career Hub
-    </p>
-
-</footer>
+    </footer>
 
 
-<script src="script.js"></script>
+    <!-- IMPORTANT: JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
