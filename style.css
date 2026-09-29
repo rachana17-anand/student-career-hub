@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #172033;
+}
+
+header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #5b4bdb;
+}
+
+button {
+    border: none;
+    background: #5b4bdb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.login-btn {
+    padding: 10px 20px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background: linear-gradient(135deg, #f7f7ff, #eef4ff);
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.tag {
+    color: #5b4bdb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #5b4bdb;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #667085;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.outline-btn {
+    background: transparent;
+    color: #5b4bdb;
+    border: 1px solid #5b4bdb;
+}
+
+
+/* DASHBOARD CARD */
+
+.hero-card {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(40, 50, 90, 0.12);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-card h2 {
+    margin-bottom: 30px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e9e9f2;
+    border-radius: 10px;
+}
+
+.progress-fill {
+    width: 68%;
+    height: 100%;
+    background: #5b4bdb;
+    border-radius: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stats strong {
+    display: block;
+    font-size: 25px;
+}
+
+.stats small {
+    color: #777;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-heading p:last-child {
+    color: #667085;
+}
+
+
+/* OPPORTUNITIES */
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.opportunity-card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.opportunity-card h3 {
+    margin-bottom: 12px;
+}
+
+.opportunity-card p {
+    color: #667085;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.opportunity-card button {
+    background: transparent;
+    color: #5b4bdb;
+    padding: 0;
+}
+
+
+/* ROADMAP */
+
+.roadmap-section {
+    background: #f0f2ff;
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.roadmap-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.roadmap-card h3 {
+    margin-bottom: 25px;
+}
+
+.roadmap-step {
+    background: #f1f0ff;
+    padding: 13px;
+    border-radius: 8px;
+}
+
+.arrow {
+    padding: 7px;
+    color: #5b4bdb;
+}
+
+
+/* PROFILE */
+
+.profile-card {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+}
+
+.profile-avatar {
+    width: 110px;
+    height: 110px;
+    background: #eeeaff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.profile-info p {
+    color: #667085;
+    margin: 8px 0 20px;
+}
+
+.skills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.skills span {
+    background: #eeeaff;
+    color: #5142c5;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.profile-links {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #151827;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #aeb3c2;
+}
+
+.copyright {
+    margin-top: 25px !important;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .opportunity-grid,
+    .roadmap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .profile-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
