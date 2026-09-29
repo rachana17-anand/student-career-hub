@@ -11,6 +11,9 @@ body {
     color: #172033;
 }
 
+
+/* NAVBAR */
+
 header {
     height: 75px;
     display: flex;
@@ -43,7 +46,6 @@ nav a {
 nav a:hover {
     color: #5b4bdb;
 }
-
 button {
     border: none;
     background: #5b4bdb;
@@ -55,7 +57,7 @@ button {
 }
 
 button:hover {
-    opacity: 0.9;
+    opacity: 0.88;
 }
 
 .login-btn {
@@ -177,7 +179,7 @@ button:hover {
 }
 
 
-/* SECTIONS */
+/* GENERAL SECTIONS */
 
 .section {
     padding: 90px 8%;
@@ -216,7 +218,7 @@ button:hover {
 
 .opportunity-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .icon {
@@ -238,6 +240,87 @@ button:hover {
     background: transparent;
     color: #5b4bdb;
     padding: 0;
+}
+
+
+/* OPPORTUNITY PAGES */
+
+.opportunity-section {
+    padding: 90px 8%;
+    background: white;
+}
+
+.opportunity-section.alternate {
+    background: #f0f2ff;
+}
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #d8dce5;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+.search-box input:focus {
+    border-color: #5b4bdb;
+}
+
+
+/* LISTING CARDS */
+
+.listing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.listing-card {
+    background: white;
+    border: 1px solid #e3e6ee;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.listing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.listing-card h3 {
+    margin: 18px 0 12px;
+    font-size: 20px;
+}
+
+.listing-card p {
+    color: #667085;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    background: #eeeaff;
+    color: #5142c5;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.details {
+    color: #667085;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    font-size: 14px;
 }
 
 
@@ -278,6 +361,10 @@ button:hover {
 
 /* PROFILE */
 
+.profile-section {
+    background: #f7f9fc;
+}
+
 .profile-card {
     max-width: 850px;
     margin: auto;
@@ -287,7 +374,7 @@ button:hover {
     display: flex;
     gap: 35px;
     align-items: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
 }
 
 .profile-avatar {
@@ -381,6 +468,7 @@ footer p {
     }
 
     .opportunity-grid,
+    .listing-grid,
     .roadmap-grid {
         grid-template-columns: 1fr;
     }
@@ -398,4 +486,5 @@ footer p {
         justify-content: center;
         flex-wrap: wrap;
     }
+
 }
