@@ -1,96 +1,103 @@
-// Scroll to Opportunities section
-function scrollToOpportunities() {
+// ============================================
+// EXPLORE OPPORTUNITIES
+// ============================================
+
+function exploreOpportunities() {
+
+    // Scroll to the opportunities section
     const section = document.getElementById("opportunities");
 
     if (section) {
+
         section.scrollIntoView({
             behavior: "smooth"
         });
+
     }
+
 }
 
 
-// Scroll to Roadmaps section
-function scrollToRoadmaps() {
-    const section = document.getElementById("roadmaps");
+// ============================================
+// OPEN SPECIFIC OPPORTUNITY
+// ============================================
 
-    if (section) {
-        section.scrollIntoView({
-            behavior: "smooth"
-        });
+function openOpportunities(type) {
+
+    if (type === "internships") {
+
+        alert(
+            "🎓 Internships\n\n" +
+            "Here you can find internship opportunities " +
+            "for engineering students."
+        );
+
     }
+
+    else if (type === "jobs") {
+
+        alert(
+            "💼 Jobs\n\n" +
+            "Here you can find entry-level engineering jobs."
+        );
+
+    }
+
+    else if (type === "learning") {
+
+        alert(
+            "📚 Learning\n\n" +
+            "Here you can find courses and learning resources."
+        );
+
+    }
+
 }
 
 
-// Open a particular opportunity section
-function showSection(sectionName) {
-    const section = document.getElementById(sectionName);
+// ============================================
+// CAREER PATH
+// ============================================
 
-    if (section) {
-        section.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-}
+function showCareer(career) {
 
-
-// Search cards
-function searchCards(inputId, cardClass) {
-    const input = document.getElementById(inputId);
-
-    if (!input) return;
-
-    const searchText = input.value.toLowerCase();
-    const cards = document.getElementsByClassName(cardClass);
-
-    for (let i = 0; i < cards.length; i++) {
-        const cardText = cards[i].innerText.toLowerCase();
-
-        if (cardText.includes(searchText)) {
-            cards[i].style.display = "block";
-        } else {
-            cards[i].style.display = "none";
-        }
-    }
-}
-
-
-// Opportunity button
-function viewOpportunity(name) {
     alert(
-        name +
-        "\n\nOfficial opportunity links will be added soon."
+        "🚀 " + career +
+        "\n\n" +
+        "A complete career roadmap for " +
+        career +
+        " can be added here."
     );
+
 }
 
 
-// Login button
-function showLogin() {
-    alert("Student login will be added soon. 🔐");
+// ============================================
+// RESOURCES
+// ============================================
+
+function showResource(resource) {
+
+    alert(
+        "📚 " + resource +
+        "\n\n" +
+        "This feature can be connected to a " +
+        "dedicated page."
+    );
+
 }
 
 
-// Resume button
-function showResumeMessage() {
-    alert("Resume builder will be added soon. 📄");
-}
+// ============================================
+// LOGIN
+// ============================================
 
+function openLogin() {
 
-// Open external link
-function openLink(url) {
-    window.open(url, "_blank");
-}
+    alert(
+        "🔐 Student Login\n\n" +
+        "Login functionality can be connected " +
+        "to Firebase or a backend later."
+    );
 
-
-// EXPLORE BUTTON
-function exploreCareerHub() {
-    const section = document.getElementById("opportunities");
-
-    if (section) {
-        section.scrollIntoView({
-            behavior: "smooth"
-        });
-    } else {
-        alert("Opportunities section not found.");
-    }
 }
