@@ -1,102 +1,96 @@
-// Scroll to opportunities
+// Scroll to Opportunities section
 function scrollToOpportunities() {
+    const section = document.getElementById("opportunities");
 
-    document.getElementById("opportunities").scrollIntoView({
-        behavior: "smooth"
-    });
-
+    if (section) {
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 }
 
 
-// Scroll to roadmaps
+// Scroll to Roadmaps section
 function scrollToRoadmaps() {
+    const section = document.getElementById("roadmaps");
 
-    document.getElementById("roadmaps").scrollIntoView({
-        behavior: "smooth"
-    });
-
+    if (section) {
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 }
 
 
 // Open a particular opportunity section
 function showSection(sectionName) {
-
     const section = document.getElementById(sectionName);
 
     if (section) {
-
         section.scrollIntoView({
             behavior: "smooth"
         });
-
     }
-
 }
 
 
 // Search cards
 function searchCards(inputId, cardClass) {
-
     const input = document.getElementById(inputId);
 
-    const searchText = input.value.toLowerCase();
+    if (!input) return;
 
+    const searchText = input.value.toLowerCase();
     const cards = document.getElementsByClassName(cardClass);
 
-
     for (let i = 0; i < cards.length; i++) {
-
         const cardText = cards[i].innerText.toLowerCase();
 
         if (cardText.includes(searchText)) {
-
             cards[i].style.display = "block";
-
         } else {
-
             cards[i].style.display = "none";
-
         }
-
     }
-
 }
 
 
 // Opportunity button
 function viewOpportunity(name) {
-
     alert(
         name +
-        "\n\nThe next version of CareerHub will connect this button to the official opportunity page."
+        "\n\nOfficial opportunity links will be added soon."
     );
-
 }
 
 
 // Login button
 function showLogin() {
-
-    alert(
-        "Student login will be added in the next version. 🔐"
-    );
-
+    alert("Student login will be added soon. 🔐");
 }
 
 
 // Resume button
 function showResumeMessage() {
-
-    alert(
-        "Resume builder will be added soon. 📄"
-    );
-
+    alert("Resume builder will be added soon. 📄");
 }
 
 
-// Open GitHub / LinkedIn
+// Open external link
 function openLink(url) {
-
     window.open(url, "_blank");
+}
 
+
+// EXPLORE BUTTON
+function exploreCareerHub() {
+    const section = document.getElementById("opportunities");
+
+    if (section) {
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
+    } else {
+        alert("Opportunities section not found.");
+    }
 }
